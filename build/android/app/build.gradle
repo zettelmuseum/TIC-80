@@ -8,13 +8,13 @@ else {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     defaultConfig {
         if (buildAsApplication) {
             applicationId "com.nesbox.tic"
         }
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 10200
         versionName "1.02.00"
         ndk {
@@ -22,7 +22,7 @@ android {
         }
         externalNativeBuild {
             ndkBuild {
-                arguments "APP_PLATFORM=android-31"
+                arguments "APP_PLATFORM=android-33"
             }
             cmake {
                 arguments "-DBUILD_WITH_RUBY=OFF", "-DBUILD_PRO=On", "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_WITH_ALL=ON"
